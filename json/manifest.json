@@ -1,0 +1,26 @@
+{
+	"manifest_version": 2,
+	"content_scripts": [ {
+      "all_frames": true,
+      "js": ["js/jquery.js", "js/comment-hover.js" ],
+			"css": [ "css/comment-hover.css" ],
+      "matches": [ "http://*.reddit.com/*", "https://*.reddit.com/*"],
+      "run_at": "document_start"
+    } ],
+	"description": "Let's look at some comments!.",
+	"icons": {
+		"128": "images/comment-hover-128.png"
+	},
+	"name": "Reddit Comment Hover",
+	"homepage_url": "http://github.com/pvrs12/comment-hover",
+	"permissions": [
+        "http://*.reddit.com/*",
+        "https://*.reddit.com/*"
+			],
+	"version": "1.0.0",
+	"applications":{
+		"gecko":{
+			"id":"pvrs12@gmail.com"
+		}
+	}
+}
