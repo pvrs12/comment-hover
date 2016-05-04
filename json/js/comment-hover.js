@@ -34,9 +34,7 @@ function show_frame(obj){
 	}
 }
 
-$(document).ready(function(){
-	$('body').append('<div id="hoverdiv"><iframe id="hoverframe" src=""></iframe></div>');
-
+function add_hover_listener(){
 	$('.comments, #hoverdiv, #hoverframe').hover(function(){
 		var obj = $(this);
 		if(!frameVisible){
@@ -52,6 +50,14 @@ $(document).ready(function(){
 		} else {
 			hide_frame();
 		}
+	});
+}
+
+$(document).ready(function(){
+	$('body').append('<div id="hoverdiv"><iframe id="hoverframe" src=""></iframe></div>');
+	add_hover_listener();
+	$(window).scroll(function(){
+		add_hover_listener();
 	});
 });
 
