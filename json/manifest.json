@@ -17,7 +17,7 @@
         "http://*.reddit.com/*",
         "https://*.reddit.com/*"
 			],
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"applications":{
 		"gecko":{
 			"id":"pvrs12@gmail.com-commenthover"

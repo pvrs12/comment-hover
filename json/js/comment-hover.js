@@ -21,12 +21,23 @@ function show_frame(obj){
 	},100);
 
 	if(!frameVisible){
+		var popupWidth = 0;
+		var popupLeft = 0;
+		if(obj.position().left > $('body').width()/2){
+			//show to the left instead
+			popupLeft = 0;
+			popupWidth = obj.position().left;
+		} else {
+			//show to the right
+			popupWidth = $('body').width()-(obj.position().left+obj.width())-5;
+			popupLeft = obj.position().left+obj.width();
+		}
 		frameVisible=true;
 		var commentURL = obj.attr('href'); 
 		$('#hoverframe').attr('src',commentURL);
 		$('#hoverdiv').css({
-			width:$('body').width()-(obj.position().left+obj.width())-5,
-			left:obj.position().left+obj.width(),
+			width:popupWidth,
+			left:popupLeft,
 			top:70,
 			height:$(window.top).height()-140
 		});
