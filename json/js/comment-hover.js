@@ -67,7 +67,7 @@ function add_hover_listener(){
 }
 
 $(document).ready(function(){
-	$('body').append('<div id="hoverdiv"><iframe id="hoverframe" src=""></iframe></div>');
+	$('body').append($('<div>',{id:"hoverdiv"}).append($('<iframe>',{id:"hoverframe",src:''})));
 	add_hover_listener();
 	$(window).scroll(function(){
 		add_hover_listener();
