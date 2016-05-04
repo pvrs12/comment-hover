@@ -17,5 +17,5 @@
         "http://*.reddit.com/*",
         "https://*.reddit.com/*"
 			],
-	"version": "1.0.3"
+	"version": "1.0.4"
 }
