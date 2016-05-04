@@ -34,8 +34,10 @@ function show_frame(obj){
 	}
 }
 
+var commentClasses='.comments, .redditFullComments, .reddit-comment-link'
+
 function add_hover_listener(){
-	$('.comments, #hoverdiv, #hoverframe').hover(function(){
+	$(commentClasses+', #hoverdiv, #hoverframe').hover(function(){
 		var obj = $(this);
 		if(!frameVisible){
 			hoverTimeout = setTimeout(function(){
